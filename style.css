@@ -1,0 +1,174 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1a;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+.game-container {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+#gameCanvas {
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    margin: 1rem 0;
+}
+
+.score {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #fff;
+}
+
+.menu-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+    min-width: 200px;
+}
+
+.menu-button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4);
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hidden {
+    display: none;
+}
+
+#instructions, #highScores {
+    margin-top: 1rem;
+}
+
+#instructions p {
+    margin: 0.5rem 0;
+    color: #ddd;
+}
+
+#scoresList {
+    margin: 1rem 0;
+    color: #ddd;
+}
+
+.back-button {
+    margin-top: 1rem;
+}
+
+.game-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.objective {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+#levelGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.level-button {
+    background-color: #2a2a2a;
+    border: 2px solid #4CAF50;
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.level-button:hover {
+    background-color: #4CAF50;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.4);
+}
+
+.level-button.locked {
+    background-color: #1a1a1a;
+    border-color: #666;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.level-button.locked:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.level-button.completed {
+    border-color: gold;
+    color: gold;
+}
+
+.obstacle {
+    background-color: #ff4444;
+    position: absolute;
+    border-radius: 3px;
+}
+
+#instructions ul {
+    text-align: left;
+    margin: 1rem 0;
+    padding-left: 2rem;
+    color: #ddd;
+}
+
+#instructions li {
+    margin: 0.5rem 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.game-container > div:not(.hidden) {
+    animation: fadeIn 0.5s ease-in-out;
+}

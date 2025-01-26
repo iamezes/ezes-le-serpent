@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EZES LE SERPENT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>EZES LE SERPENT</h1>
+        <div id="menu" class="menu">
+            <h2>Menu Principal</h2>
+            <button id="playButton" class="menu-button">Mode Classique</button>
+            <button id="levelSelectButton" class="menu-button">Mode Niveaux</button>
+            <button id="instructionsButton" class="menu-button">Instructions</button>
+            <button id="highScoresButton" class="menu-button">Meilleurs Scores</button>
+        </div>
+        <div id="levelSelect" class="hidden">
+            <h2>Sélection du Niveau</h2>
+            <div id="levelGrid"></div>
+            <button class="menu-button back-button">Retour</button>
+        </div>
+        <div id="gameArea" class="hidden">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="game-info">
+                <div class="score">Score: <span id="scoreValue">0</span></div>
+                <div class="level">Niveau: <span id="levelValue">-</span></div>
+                <div class="objective" id="levelObjective"></div>
+            </div>
+            <button id="backToMenu" class="menu-button">Retour au Menu</button>
+        </div>
+        <div id="instructions" class="hidden">
+            <h2>Instructions</h2>
+            <p>Utilisez les flèches du clavier pour diriger le serpent</p>
+            <p>Mangez les points rouges pour grandir et marquer des points</p>
+            <p>Vous pouvez traverser les murs pour réapparaître de l'autre côté !</p>
+            <p>Mode Niveaux :</p>
+            <ul>
+                <li>Niveau 1 : Vitesse normale, pas d'obstacles</li>
+                <li>Niveau 2 : Vitesse accrue, obstacles simples</li>
+                <li>Niveau 3 : Vitesse rapide, obstacles mobiles</li>
+                <li>Niveau 4 : Vitesse très rapide, labyrinthe</li>
+                <li>Niveau 5 : Mode Expert, surprises multiples !</li>
+            </ul>
+            <button class="menu-button back-button">Retour</button>
+        </div>
+        <div id="highScores" class="hidden">
+            <h2>Meilleurs Scores</h2>
+            <div id="scoresList"></div>
+            <button class="menu-button back-button">Retour</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
